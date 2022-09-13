@@ -6,3 +6,4 @@ for Philosophy is obtained. After desired number of searches are complete, user 
 
 Libraries: graphviz, bs4, requests
 
+Additional Information: This is one of my first projects and any contributions are both encouraged and appreciated.
