@@ -1,4 +1,4 @@
-import graphviz
+import graphviz as gv
 import requests
 from bs4 import BeautifulSoup
 from bs4 import element
@@ -74,7 +74,6 @@ def CheckREDIRECT(Wiki):  #Function to account for wikipedia articles that are i
 						if item2[CHAR] == '''"''':
 							print(NewWiki)
 							return NewWiki
-							break
 						NewWiki += item2[CHAR]
 	if len(NewWiki) == 0:
 		return False
@@ -125,12 +124,10 @@ def NewSearch(WIKI, CAT):  #Function to redirect search when user search input y
 							RedirectLink = j.get("href")
 							if RedirectLink == None:
 								RedirectLink = j.find(href = True).get("href")
-							#print(RedirectLink)
 				elif str(i).count("href") == 1:
 					RedirectLink = i.get("href")
 					if RedirectLink == None:
 						RedirectLink = i.find(href=True).get("href")
-					#print(RedirectLink)
 					ResultList += AddBlankLine(str(i.text), ResultNum)
 					ResultNum += 1
 	for result in ResultList:
@@ -187,13 +184,8 @@ def SearchWiki(Start):    #Function that searches Wikipedia and requests HTML da
 						if "wiktionary" not in HERF and "Help:Pronunciation" not in HERF and InBrack == False:
 							HREF_Pres = True
 							NextArt = ExtractName(HERF)
-							#print(FirstInst)
-							#print(CheckBrackets(FirstPText,FirstInst))
-							#print(TITLE)
-							#print("\n" + FirstPText)
 							if HREF_Pres == True:
 								return NextArt
-								ExitBool = True
 	CheckEmpty = FirstWikiPage.find(id="content").find_all("li")
 	for i in CheckEmpty[0]:
 		if type(i) is not element.NavigableString and i.get("href") != None:
@@ -204,8 +196,7 @@ def SearchWiki(Start):    #Function that searches Wikipedia and requests HTML da
 				NextArt = NewLink[1:]
 			return NextArt
 
-#SearchWiki(FirstArticle)
-import graphviz as gv
+
 def CreateFlow(CombList):
 	G_Wiki = gv.Digraph(name="WikipediaWebCrawlerFlowchart", format="pdf")
 	G_Wiki.attr(concentrate = "true", overlap = "false", splines = "true")
