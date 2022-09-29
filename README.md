@@ -8,6 +8,9 @@ Libraries/dependencies: graphviz, bs4, requests
 
 Additional Information: This is one of my first projects and any contributions are both encouraged and appreciated.
 
-*Wikipedia articles are frequently altered and as a result, a perpetual loop may be obtained instead of the article for Philosophy, as is the case in the example flowchart* 
+*Wikipedia articles are frequently altered and as a result, a perpetual loop may be obtained instead of the article for Philosophy* 
 
-[WikipediaWebCrawlerFlowchart1.gv.pdf](https://github.com/shawnr-ca/WikipediaPhilosophyWebCrawler/files/9669756/WikipediaWebCrawlerFlowchart1.gv.pdf)
+Examples:
+
+![WikipediaWebCrawlerFlowchart1 gv (5)-1](https://user-images.githubusercontent.com/113395566/192914688-d0b5bff0-7463-4e89-92db-7af85d3af538.png)
+![WikipediaWebCrawlerFlowchart1 gv (4)-1](https://user-images.githubusercontent.com/113395566/192914182-1957b777-6b7f-424c-b0b7-8a2bb2ec5da0.png)
